@@ -29,7 +29,7 @@ import streamlit as st
 from dataclasses import dataclass
 from typing import Any, List
 from web3 import Web3
-w3 = Web3(Web3.HTTPProvider('http://127.0.0.1:7546'))
+w3 = Web3(Web3.HTTPProvider('http://127.0.0.1:8545'))
 ################################################################################
 # Step 1:
 # Import Ethereum Transaction Functions into the Fintech Finder Application
@@ -281,7 +281,7 @@ if st.sidebar.button("Send Transaction"):
 
 # The function that starts the Streamlit application
 # Writes FinTech Finder candidates to the Streamlit page
-get_people(w3)
+get_people()
 
 ################################################################################
 # Step 3: Inspect the Transaction
